@@ -1,4 +1,5 @@
 include(./anglepanel/AnglePanel.pri)
+include(./azimuthpanel/AzimuthPanel.pri)
 include(./bar/Bar.pri)
 include(./battery/Battery.pri)
 include(./editablelabel/EditableLabel.pri)
@@ -7,7 +8,8 @@ include(./panel/Panel.pri)
 include(./switcherdual/SwitcherDual.pri)
 
 
-HEADERS +=
+HEADERS += \
+    $$PWD/azimuthpanel.h
 
 SOURCES +=
 

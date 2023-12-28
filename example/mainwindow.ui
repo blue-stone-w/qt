@@ -13,28 +13,14 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralWidget">
-   <widget class="QGroupBox" name="switchBox">
-    <property name="geometry">
-     <rect>
-      <x>280</x>
-      <y>40</y>
-      <width>361</width>
-      <height>80</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>switch</string>
-    </property>
-   </widget>
-  </widget>
+  <widget class="QWidget" name="centralWidget"/>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
      <width>1080</width>
-     <height>26</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

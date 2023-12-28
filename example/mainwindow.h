@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <AnglePanel.h>
+#include <AzimuthPanel.h>
 #include <Bar.h>
 #include <Battery.h>
 #include <EditableLabel.h>
@@ -24,12 +26,14 @@ public:
 
 private:
   Ui::MainWindow *ui;
-  Bar bar;
-  Battery battery;
-  EditableLabel editable_label;
-  InfoLabel info_label;
-  Panel panel;
-  SwitcherDual switch_dual;
+
+  AzimuthPanel *azimuth_panel;
+  Bar* bar;
+  Battery* battery;
+  EditableLabel* editable_label;
+  InfoLabel *info_label;
+  Panel *panel;
+  SwitcherDual *switch_dual;
 };
 
 #endif // MAINWINDOW_H

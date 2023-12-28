@@ -122,7 +122,7 @@ void SwitcherDual::onTimeout() // m_timer
   if (m_bChecked)
   {
     m_nX += 1;
-    if (m_nX >= width() - m_nHeight)    {      m_timer.stop();    }
+    if (m_nX >= width() - m_nHeight - m_nHeight / 2)    {      m_timer.stop();    }
   }
   else
   {

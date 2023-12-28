@@ -10,7 +10,7 @@ Bar::Bar(QWidget *parent) : QWidget(parent)
   setRange();
   setGeometry();
   resize();
-  setCurrValue();
+  update();
 }
 
 Bar::~Bar()
@@ -46,7 +46,7 @@ void Bar::setCurrValue(float valueIn)
 {
   if (valueIn > min && valueIn < max)
   {
-    currPentcent = (valueIn - min)/range;
+    currPentcent = (valueIn - min)/range*100;
   }
   else if (valueIn < min)
   {
@@ -64,19 +64,26 @@ void Bar::draw()
   colorbar->resize(currPentcent*width/100, height-2);
   // display different color
   QPalette pa;
+  QColor cur_color;
   if (currPentcent > 40)
   {
-    pa.setColor(QPalette::Window, QColor(255*(100-currPentcent)/(100-40),255,0));
+    cur_color=QColor(255*(100-currPentcent)/(100-40),255,0);
+
   }
   else if (currPentcent > 15)
   {
-    pa.setColor(QPalette::Window, QColor(255,255*(currPentcent-15)/(40-15),0));
+    cur_color= QColor(255,255*(currPentcent-15)/(40-15),0);
   }
   else
   {
-    pa.setColor(QPalette::Window, QColor(255,0,0));
+    cur_color=QColor(255,0,0);
   }
+  pa.setColor(QPalette::Window, cur_color);
   colorbar->setPalette(pa);
+
+//  QPalette bg_pa=background->palette();
+//  bg_pa.setColor(QPalette::WindowText, cur_color);
+//  background->setPalette(bg_pa);
 }
 
 void Bar::setRange(float minIn, float maxIn)

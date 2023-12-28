@@ -11,7 +11,8 @@ class InfoLabel : public QWidget
   Q_OBJECT
 public:
   explicit InfoLabel(QWidget *parent = nullptr);
-  bool setInfo(QString txt);
+  void setLab(QString txt="item");
+  bool setInfo(QString txt="value");
   bool setParent(QWidget *parent);
 
 signals:
@@ -19,7 +20,6 @@ signals:
 public slots:
  private:
   QLabel *lab, *info; // name and info, such as "name" and "Tom"
-  void setLab(QString txt);
 };
 
 #endif // INFOLABEL_H

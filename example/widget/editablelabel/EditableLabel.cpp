@@ -50,7 +50,7 @@ void EditableLabel::init(void)
   stack = new QStackedWidget(this);
 
   label = new QLabel("10");
-  label->setStyleSheet("QLabel{font:20px;background-color:rgb(0,250,250);}");
+  label->setStyleSheet("QLabel{font:20px;background-color:rgb(230,230,230);}");
   label->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
 
   lineEdit = new QLineEdit();
